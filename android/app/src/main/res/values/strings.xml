@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">ChildLocator</string>
+    <string name="unlogged_tab_parent">Parent</string>
+    <string name="unlogged_tab_child">Child</string>
+    <string name="unlogged_tab_register">Register</string>
+    <string name="app_desc">Protect and be aware of the ones you love in the safest way possible. Easy as create account, login and pair devices with a token.</string>
+    <string name="app_desc_warning">A Child of yours just sent an SOS. Login into the app to find his current location!</string>
+    <string name="prompt_username">Email Address</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_pair_child">Pair Devices</string>
+    <string name="prompt_parent_token">Parent Token</string>
+    <string name="prompt_password_repeat">Repeat Password</string>
+    <string name="prompt_person_name">Full Name</string>
+
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">Password don\'t match requirements</string>
+    <string name="error_password_empty">The password field is empty</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_name">Please enter a first and/or last name</string>
+    <string name="non_match_pwd">Passwords don\'t match</string>
+    <string name="loading">Loading</string>
+    <string name="error_network_unknown">An error occurred while trying to connect you. Please check your connection, or check server status</string>
+    <string name="error_server_internal">Server returned error. Try again later or contact Admin</string>
+    <string name="password_info">Password info</string>
+    <string name="password_info2">Password must contain at least:\n- one number,\n- one upper case letter,\n
+                                    - one lower case letter, \n- one special character.\nAnd have at least 8 characters.</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_add">Add Child</string>
+    <string name="action_back">Go Back</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="add_child_toolbar">Add Child</string>
+    <string name="action_register">Register</string>
+    <string name="prompt_child_name">Child Name</string>
+    <string name="action_add_child">Add Child</string>
+    <string name="child_token_desc">Your child token:</string>
+    <string name="error_invalid_token_length">Invalid token length</string>
+    <string name="title_activity_child">ChildActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="header_name">Name</string>
+    <string name="header_last_location">Last Location</string>
+    <string name="delete_child_title">Delete Child</string>
+    <string name="confirm_delete_child">Are you sure you want to delete child </string>
+    <string name="cancel_button">Cancel</string>
+    <string name="proceed_button">Proceed</string>
+    <string name="sos_alert">SOS Alert</string>
+    <string name="sos_sent">SOS Sent. Wait there kiddo</string>
+    <string name="further_info">Important Information</string>
+    <string name="further_close_time">This token will be valid until </string>
+    <string name="further_close_window">If Token code is lost/expires, please generate another one. </string>
+    <string name="further_child_notice">After first pairing a child, it may take a while for you to get the first child location. </string>
+
+</resources>

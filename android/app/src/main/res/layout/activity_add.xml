@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include android:id="@+id/toolbar_actionbar" layout="@layout/toolbar_default"
+        android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:id="@+id/add_child_form" android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText android:id="@+id/name" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="@string/prompt_child_name"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+
+        <Button android:id="@+id/add_child_button" style="?android:textAppearanceSmall"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="@string/action_add_child"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout android:id="@+id/get_token_form" android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/child_token_desc"
+            android:textStyle="normal"
+            android:textSize="35sp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView android:id="@+id/token" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:layout_marginBottom="23dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textColor="#c10000"
+            android:text="@string/further_info"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/mTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="normal"
+            android:textColor="#c10000"
+            android:textAlignment="center"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="normal"
+            android:textColor="#c10000"
+            android:textAlignment="center"
+            android:text="@string/further_close_window"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textStyle="normal"
+            android:textColor="#c10000"
+            android:textAlignment="center"
+            android:text="@string/further_child_notice"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/email_login_form" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText android:id="@+id/token" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="@string/prompt_parent_token"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+
+        <Button android:id="@+id/child_sign_in_button" style="?android:textAppearanceSmall"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="@string/action_pair_child"
+            android:textStyle="bold" />
+        </LinearLayout>
+</LinearLayout>

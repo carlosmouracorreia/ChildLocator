@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout android:id="@+id/email_login_form" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText android:id="@+id/username" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="@string/prompt_username"
+            android:inputType="textEmailAddress" android:maxLines="1"
+            android:singleLine="true" />
+
+        <EditText android:id="@+id/password" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="@string/prompt_password"
+            android:imeActionId="@+id/login"
+            android:imeOptions="actionUnspecified" android:inputType="textPassword"
+            android:maxLines="1" android:singleLine="true" />
+
+        <EditText android:id="@+id/password_repeat" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="@string/prompt_password_repeat"
+            android:imeActionId="@+id/login"
+            android:imeOptions="actionUnspecified" android:inputType="textPassword"
+            android:maxLines="1" android:singleLine="true" />
+
+        <EditText android:id="@+id/person_name" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="@string/prompt_person_name"
+            android:inputType="textPersonName" android:maxLines="1"
+            android:singleLine="true" />
+
+        <Button android:id="@+id/register" style="?android:textAppearanceSmall"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="@string/action_register"
+            android:textStyle="bold" />
+        </LinearLayout>
+</LinearLayout>

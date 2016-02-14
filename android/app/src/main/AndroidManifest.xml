@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pt.tecnico.childlocator.main">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <permission android:name="pt.tecnico.childlocator.main.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="pt.tecnico.childlocator.main.permission.C2D_MESSAGE" />
+
+    <application
+        android:name="pt.tecnico.childlocator.helper.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".UnloggedActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ParentActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".AddActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/title_activity_add" />
+        <activity
+            android:name=".ChildActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <!-- START GOOGLE CLOUD SERVICES -->
+
+        <service
+            android:name="pt.tecnico.childlocator.services.RegistrationIntentService"
+            android:exported="false">
+        </service>
+
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="pt.tecnico.childlocator.main" />
+            </intent-filter>
+        </receiver>
+
+        <!-- [START gcm_listener] -->
+        <service
+            android:name="pt.tecnico.childlocator.services.MyGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <!-- [END gcm_listener] -->
+
+        <service
+            android:name="pt.tecnico.childlocator.services.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+
+        <!-- END GOOGLE CLOUD SERVICES -->
+
+        <!-- START GPS LOCATION SERVICE  -->
+
+
+        <receiver android:name="pt.tecnico.childlocator.services.GpsTrackerBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="pt.tecnico.childlocator.services.CoordsIntervalReceiver"></receiver>
+
+        <service android:name="pt.tecnico.childlocator.services.SendCoordsService" />
+
+        <!-- END GOOGLE CLOUD SERVICES -->
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+    </application>
+
+</manifest>
